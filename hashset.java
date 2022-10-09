@@ -1,5 +1,6 @@
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Iterator;
 
 public class hashset {
   public static void main(String[] args) {
@@ -9,13 +10,17 @@ public class hashset {
     hm.add(8);
     hm.add(23);
     hm.add(1);
-    System.out.println(hm);
-    if(hm.contains(7)){
-        System.out.println("found!!");
+    Iterator it= hm.iterator();
+    while(it.hasNext()){
+        System.out.println(it.next());
+
     }
-    else{
-        System.out.println("not found!!");
+    //second ways to iterate
+    for(Integer hm1:hm){
+        System.out.println(hm1);
+    }
+        
     }
 
   }  
-}
+
